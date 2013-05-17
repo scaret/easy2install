@@ -1,0 +1,12 @@
+#!/bin/sh
+
+echo "install pause"
+sudo cp pause /usr/bin/pause
+echo "make git colorful"
+pause
+git config --global color.diff auto
+git config --global color.status auto
+git config --global color.branch auto
+echo "sudo yum install something"
+pause
+sudo yum install gcc gcc-c++ telnet  vim tree
