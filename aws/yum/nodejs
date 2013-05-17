@@ -1,0 +1,19 @@
+#!/bin/sh
+
+sudo yum install gcc c++
+
+pause
+
+wget http://nodejs.org/dist/v0.10.6/node-v0.10.6.tar.gz
+tar zxvf http://nodejs.org/dist/v0.10.6/node-v0.10.6.tar.gz
+
+echo "will make and make install for several seconds"
+pause
+(cd node-v0.10.6 && make && sudo make install)
+sudo ln -s /usr/local/bin/node /usr/bin/node
+sudo ln -s /usr/local/lib/node /usr/lib/node
+sudo ln -s /usr/local/bin/npm /usr/bin/npm
+sudo ln -s /usr/local/bin/node-waf /usr/bin/node-waf
+echo "install coffee"
+pause
+sudo npm install -g coffee-script
