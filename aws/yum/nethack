@@ -1,0 +1,9 @@
+#!/bin/sh
+
+wget http://dl.fedoraproject.org/pub/epel/5/i386/nethack-3.4.3-12.el5.1.i386.rpm
+
+sudo yum install libXaw
+
+sudo rpm -ivh nethack-3.4.3-12.el5.1.i386.rpm
+
+echo "DONE! you can run nethack and enyoy!"
