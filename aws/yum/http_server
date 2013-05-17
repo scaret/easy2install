@@ -10,6 +10,9 @@ mysqladmin -u root password '123456'
 echo "*MANUAL change php.ini: display_error or something"
 pause
 sudo vi /etc/php.ini
+echo "change user and group"
+pause
+sudo vi /etc/httpd/conf/httpd.conf
 echo "start httpd server (change firewall config by yourself)"
 pause
 sudo service httpd start
