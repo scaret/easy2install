@@ -1,0 +1,15 @@
+#!/bin/sh
+
+sudo yum -y install httpd php mysql mysql-server php-mysql httpd-manual mod_ssl mod_perl mod_auth_mysql php-mcrypt php-gd php-xml php-mbstring php-ldap php-pear php-xmlrpc mysql-connector-odbc mysql-devel libdbi-dbd-mysql
+echo "start mysql"
+pause
+sudo service mysqld start
+echo "change root password to 123456"
+pause
+mysqladmin -u root password '123456'
+echo "*MANUAL change php.ini: display_error or something"
+pause
+sudo vi /etc/php.ini
+echo "start httpd server (change firewall config by yourself)"
+pause
+sudo service httpd start
