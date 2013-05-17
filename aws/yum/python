@@ -1,0 +1,17 @@
+#!/bin/sh
+
+sudo yum install python27 python-devel
+echo "change python version to 2.7"
+pause
+sudo rm -f /usr/bin/python
+sudo ln -s /usr/bin/python27 /usr/bin/python
+echo "* MANUAL change yum python version"
+pause
+sudo vi /usr/bin/yum
+echo "install pip"
+pause
+sudo easy_install pip
+echo "install virtualenv"
+pause
+sudo pip install virtualenv
+
