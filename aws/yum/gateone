@@ -8,7 +8,9 @@ cd GateOne
 sudo python setup.py install
 cd /opt/gateone
 echo "run first,interrupt to setup port disable_ssl origin"
+pause
 sudo python gateone.py
 sudo vi settings/10ser*
 echo "you can use nohup to run gateone later"
-sodo python gateone.py
+pause
+sudo python gateone.py
