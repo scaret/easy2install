@@ -1,0 +1,14 @@
+#!/bin/sh
+
+wget http://redis.googlecode.com/files/redis-2.6.13.tar.gz
+tar zxvf redis-2.6.13.tar.gz
+cd redis-2.6.13
+make && sudo make install
+pause
+cd ..
+sudo mkdir /usr/local/redis
+sudo cp ./redis-instances /usr/local/redis
+cd /usr/local/redis/redis-instances
+sudo  /usr/local/bin/redis-server redis_server_port_6380.conf
+echo "redis server is running on port 6380."
+echo "HOWTO close it: redis-cli -p 6380, then print shutdown"
