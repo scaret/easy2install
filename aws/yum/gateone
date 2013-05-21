@@ -1,0 +1,14 @@
+#!/bin/sh
+
+sudo pip install tornado kerberos
+pause
+
+git clone https://github.com/liftoff/GateOne.git
+cd GateOne
+sudo python setup.py install
+cd /opt/gateone
+echo "run first,interrupt to setup port disable_ssl origin"
+sudo python gateone.py
+sudo vi settings/10ser*
+echo "you can use nohup to run gateone later"
+sodo python gateone.py
