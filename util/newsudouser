@@ -1,0 +1,11 @@
+#!/bin/sh
+
+sudo groupadd scaret
+sudo useradd -d /home/scaret -m -s /bin/bash scaret
+sudo passwd scaret
+echo "scaret    ALL=(ALL)       ALL"
+pause
+sudo vi /etc/sudoers
+echo "sshd_config PasswordAuthentication ChallengeResponseAuthentication"
+sudo vi /etc/ssh/sshd_config
+sudo service sshd restart
