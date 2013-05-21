@@ -5,9 +5,12 @@ echo "change python version to 2.7"
 pause
 sudo rm -f /usr/bin/python
 sudo ln -s /usr/bin/python27 /usr/bin/python
-echo "* MANUAL change yum python version"
+echo "* MANUAL change yum python version to 2.6"
 pause
 sudo vi /usr/bin/yum
+echo "install python2.7 setuptools"
+wget https://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg
+sudo sh setuptools-0.6c11-py2.7.egg
 echo "install pip"
 pause
 wget https://pypi.python.org/packages/source/p/pip/pip-1.3.1.tar.gz
