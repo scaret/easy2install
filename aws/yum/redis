@@ -7,7 +7,7 @@ make && sudo make install
 pause
 cd ..
 sudo mkdir /usr/local/redis
-sudo cp ./redis-instances /usr/local/redis
+sudo cp -r redis-instances /usr/local/redis
 cd /usr/local/redis/redis-instances
 sudo  /usr/local/bin/redis-server redis_server_port_6380.conf
 echo "redis server is running on port 6380."
