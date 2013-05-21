@@ -1,11 +1,11 @@
 #!/bin/sh
 
-sudo yum install gcc c++
+sudo yum install gcc gcc-c++
 
 pause
 
 wget http://nodejs.org/dist/v0.10.6/node-v0.10.6.tar.gz
-tar zxvf http://nodejs.org/dist/v0.10.6/node-v0.10.6.tar.gz
+tar zxvf node-v0.10.6.tar.gz
 
 echo "will make and make install for several seconds"
 pause
