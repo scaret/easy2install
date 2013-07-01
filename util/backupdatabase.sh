@@ -21,3 +21,6 @@ mysqldump -v -u${USER} -p${PASS} -h${HOST} --default-character-set=utf8 --skip-l
 
 #zip the files
 zip ${PREFIX}mysql_backup_${timenow}.zip ./*.sql
+
+#then you can use scp to copy the zip file like:
+#  scp -i [pem] [user]@[host]:[full path] .
