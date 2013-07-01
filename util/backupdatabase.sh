@@ -1,4 +1,4 @@
-#!/usr/sh
+#!/bin/sh
 
 USER=user
 PASS=pass
