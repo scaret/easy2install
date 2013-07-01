@@ -24,3 +24,7 @@ zip ${PREFIX}mysql_backup_${timenow}.zip ./*.sql
 
 #then you can use scp to copy the zip file like:
 #  scp -i [pem] [user]@[host]:[full path] .
+
+# .. and import database
+
+# mysql -u[user] -p[password] -h [host] < xxx.sql --default-character-set=utf8
