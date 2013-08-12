@@ -1,6 +1,5 @@
 #!/bin/sh
 
-sudo groupadd scaret
 sudo useradd -d /home/scaret -m -s /bin/bash scaret
 sudo passwd scaret
 echo "scaret    ALL=(ALL)       ALL"
